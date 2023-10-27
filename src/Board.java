@@ -107,6 +107,13 @@ public class Board implements Serializable {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(String.format("Name: %s\n", this.name));
         stringBuilder.append(String.format("Turn: %s\n", this.turn));
+        for (int i = 0; i < this.width; i++) {
+            stringBuilder.append(" ");
+            stringBuilder.append(i);
+            stringBuilder.append(" ");
+        }
+        stringBuilder.append("\n");
+        stringBuilder.append(String.format("%s\n", "---".repeat(this.width)));
         for (int h = this.height - 1; h >= 0; h--) {
             for (int w = 0; w < this.width; w++) {
                 stringBuilder.append(" ");

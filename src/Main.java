@@ -61,6 +61,7 @@ public class Main {
                     int winnerBox = board.checkWinner();
                     if (winnerBox != 0) {
                         System.out.printf("Winner %d!\n", winnerBox);
+                        System.out.println(board);
                         exit = true;
                     }
                 }
